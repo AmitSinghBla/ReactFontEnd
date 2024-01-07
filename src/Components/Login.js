@@ -49,6 +49,7 @@ const Login = () => {
 
       <input
         placeholder="Enter Password"
+        value={password}
         onChange={passwordHandler}
         type="password"
       />
