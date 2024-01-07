@@ -45,7 +45,7 @@ const Login = () => {
     </div>
 
       <input
-        placeholder="userame"
+        placeholder="username"
         value={userName}
         onChange={userNameHandler}
         type="text"
