@@ -38,12 +38,12 @@ const Login = () => {
   };
 
   return (
-    <div>
-    <div>
-      {success && <h1>Login sucessfully</h1>}
-      {message && <h2>Invalid userName or Password</h2>}
-    </div>
     <form className="login-container" onSubmit={onSubmitHandlder}>
+    <div className="error-text">
+    {message && <p>Invalid userName or Password</p>}
+    {success && <p>Login sucessfully</p>}
+    </div>
+
       <input
         placeholder="userame"
         value={userName}
@@ -62,7 +62,6 @@ const Login = () => {
 
       <p className="signup-text">Not registered? <span className="signup-text-account">Create an account</span> </p>
     </form>
-    </div>
   );
 };
 
