@@ -1,4 +1,5 @@
 import React from "react";
+import 'D:/ayushi/Project/ReactFontEnd/src/Styles/Login.css'
 
 const Login = () => {
   const [userName, setUserName] = React.useState("");
@@ -37,25 +38,31 @@ const Login = () => {
   };
 
   return (
-    <form className="login-form" onSubmit={onSubmitHandlder}>
+    <div>
+    <div>
       {success && <h1>Login sucessfully</h1>}
       {message && <h2>Invalid userName or Password</h2>}
-
+    </div>
+    <form className="login-container" onSubmit={onSubmitHandlder}>
       <input
-        placeholder="Enter userName"
+        placeholder="userame"
         value={userName}
         onChange={userNameHandler}
+        type="text"
       />
 
       <input
-        placeholder="Enter Password"
+        placeholder="password"
         value={password}
         onChange={passwordHandler}
         type="password"
       />
 
-      <button type="submit">Login</button>
+      <button type="submit">LOGIN</button>
+
+      <p className="signup-text">Not registered? <span className="signup-text-account">Create an account</span> </p>
     </form>
+    </div>
   );
 };
 
