@@ -1,5 +1,5 @@
 import React from "react";
-import 'D:/ayushi/Project/ReactFontEnd/src/Styles/Login.css'
+import '../Styles/Login.css'
 
 const Login = () => {
   const [userName, setUserName] = React.useState("");
