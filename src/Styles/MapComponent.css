@@ -1,6 +1,9 @@
 .leaflet-container{
-    height: 500px;
-    width: 40%;
+    height: 50vh;
+    width: 35%;
     overflow: hidden;
-
+    margin-left: 120vh;
+    margin-top: -30vh;
 }
+
+
