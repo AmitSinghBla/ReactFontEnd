@@ -3,6 +3,7 @@ import MapComponent from "./Components/MapComponent";
 import './styles.css'
 import Login from "./Components/Login";
 import { useAuth } from "./AuthContext";
+import Sidebar from "./Components/Sidebar";
 
 export default function App() {
   const { authenticated } = useAuth();
@@ -13,7 +14,7 @@ export default function App() {
       <Routes>
       <Route index element={<Login/>}/>
       <Route path="/dashboard" 
-      element={authenticated ? <MapComponent /> : <Navigate to="/"/>}/>
+      element={authenticated ? <Sidebar/> : <Navigate to="/"/>}/>
       </Routes>
       </BrowserRouter>
     </div>

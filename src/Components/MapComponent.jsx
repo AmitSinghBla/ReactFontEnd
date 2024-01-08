@@ -30,6 +30,7 @@ const MapComponent = () => {
 
         <Marker position={markerPosition} icon={blueIcon} />
         <Marker position={{ lat: 40.200905, lng: 74.362271 }} icon={blueIcon} />
+        <Marker position={{ lat: 28.589578, lng: 77.338520 }} icon={blueIcon} />
                     
         </MapContainer>
         </>
