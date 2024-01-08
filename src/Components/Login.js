@@ -1,15 +1,19 @@
 import React from "react";
 import '../Styles/Login.css'
+import { useAuth } from "../AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [message, setMessage] = React.useState(false);
   const [success, setSuccess] = React.useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmitHandlder = (event) => {
     event.preventDefault();
-    fetch("https://dummyjson.com/auth/login", {
+    fetch("http://localhost:8080/api/usercredentials/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -21,6 +25,8 @@ const Login = () => {
       if (res.ok) {
         setSuccess(true);
         setMessage(false);
+        login();
+        navigate("/dashboard")
       } else {
         console.log("Invalid");
         setSuccess(false);
